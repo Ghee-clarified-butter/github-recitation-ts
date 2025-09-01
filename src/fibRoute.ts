@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 // Temporary placeholder - replace with actual import when fib.ts is fixed
 const fibonacci = (n: number): number => {
-  // Placeholder implementation or you can import when ready
+  // Placeholder implementation or  can import when ready
   if (n <= 1) return n;
   return fibonacci(n - 1) + fibonacci(n - 2);
 };
@@ -13,8 +13,8 @@ const fibonacci = (n: number): number => {
 export default (req: Request, res: Response): void => {
   const { num } = req.params;
   
-  // Ensure num is a string and can be parsed as integer
-  const numValue = parseInt(num as string, 10);
+  // Parse the string parameter as integer
+  const numValue = parseInt(num, 10);
   
   const fibN = fibonacci(numValue);
   let result = `fibonacci(${num}) is ${fibN}`;
