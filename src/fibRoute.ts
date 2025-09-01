@@ -1,5 +1,14 @@
 import { Request, Response } from 'express';
-import fibonacci from './fib';
+
+// Temporary placeholder - replace with actual import when fib.ts is fixed
+const fibonacci = (n: number): number => {
+  // Placeholder implementation or you can import when ready
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+};
+
+// TODO: Replace above with this line when fib.ts is properly exported:
+// import fibonacci from './fib';
 
 export default (req: Request, res: Response): void => {
   const { num } = req.params;
